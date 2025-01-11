@@ -2,11 +2,64 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProject.Pages.RegisterPage"
-             Title="RegisterPage">
-    <VerticalStackLayout>
-        <Label 
+             BackgroundColor="#FFFFFF">
+
+    <VerticalStackLayout Spacing="20">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="gobackbutton" 
+                    Text="Back" 
+                    TextColor="Black" 
+                    BackgroundColor="Transparent"
+                    Clicked="gobackbutton_Clicked"
+                    HorizontalOptions="Start"/>
+        </Grid>
+
+        <VerticalStackLayout Padding="20"  Spacing="20">
+
+            <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            TextColor="Black"/>
+            
+            <Entry 
+                x:Name="emailregister"
+                BackgroundColor="#e5e5e5"
+                TextColor="Black"
+                Placeholder="E-mail"
+                />
+
+            <Entry
+                x:Name="passwordregister"
+                BackgroundColor="#e5e5e5"
+                TextColor="Black"
+                Placeholder="Password"
+                />
+            <Entry
+                x:Name="namesurnameregister"
+                BackgroundColor="#e5e5e5"
+                TextColor="Black"
+                Placeholder="Name-Surname"
+                />
+            <Button
+                x:Name="registerbutton"
+                Text="Sign In"
+                BackgroundColor="#FCA311"
+                TextColor="White"
+                Margin="0, 15, 0, 0"
+                Clicked="registerbutton_Clicked"/>
+        </VerticalStackLayout>
     </VerticalStackLayout>
+
+    
 </ContentPage>

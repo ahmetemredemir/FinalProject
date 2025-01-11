@@ -18,6 +18,7 @@
     <ShellContent
         Title=""
         Route="Register"
-        ContentTemplate="{DataTemplate pages:RegisterPage}"/>
+        ContentTemplate="{DataTemplate pages:RegisterPage}"
+        Shell.NavBarIsVisible="false"/>
 
 </Shell>
