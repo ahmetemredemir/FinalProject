@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Pages.OpeningScreen"
+             BackgroundColor="#FFFFFF">
+    <VerticalStackLayout Padding="20"  Spacing="20" VerticalOptions="Center">
+        <Label 
+            Text="Welcome to the App!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="black"/>
+
+
+        <VerticalStackLayout Spacing="10">
+            <Entry x:Name="emailentry"  Placeholder="E-mail" BackgroundColor="#e5e5e5" TextColor="Black"/>
+            <Entry x:Name="passwordentry" Placeholder="Password" BackgroundColor="#e5e5e5" TextColor="Black"/>
+
+            <Button x:Name="loginbutton"
+                    Text="Log In"
+                    BackgroundColor="#FCA311"
+                    TextColor="White"
+                    Clicked="loginbutton_Clicked"/>
+
+            <Label 
+                x:Name="donthaveaccounttext"
+                Text="I don't have an account"
+                FontSize="10"
+                TextColor="DarkGray" 
+                HorizontalOptions="End">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="donthaveacc_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+
+            </Label>
+        </VerticalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>
