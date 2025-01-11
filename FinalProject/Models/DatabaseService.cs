@@ -16,11 +16,9 @@ namespace FinalProject.Models
         {
             if (database == null)
             {
-                // Veritabanı dosyasının yolu
                 var databasePath = Path.Combine(FileSystem.AppDataDirectory, "UserDatabase.db");
                 database = new SQLiteAsyncConnection(databasePath);
 
-                // Kullanıcı tablosunu oluştur
                 await database.CreateTableAsync<UserInfo>();
             }
         }
@@ -29,5 +27,6 @@ namespace FinalProject.Models
         {
             return database;
         }
+
     }
 }

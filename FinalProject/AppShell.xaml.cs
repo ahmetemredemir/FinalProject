@@ -11,6 +11,8 @@ namespace FinalProject
             Routing.RegisterRoute(nameof(OpeningScreen), typeof(OpeningScreen));
 
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
+
+            Routing.RegisterRoute(nameof(AppMainPage), typeof(AppMainPage));
         }
     }
 }

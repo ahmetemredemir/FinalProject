@@ -4,29 +4,9 @@
              x:Class="FinalProject.Pages.RegisterPage"
              BackgroundColor="#FFFFFF">
 
-    <VerticalStackLayout Spacing="20">
+    <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            
-            <Button x:Name="gobackbutton" 
-                    Text="Back" 
-                    TextColor="Black" 
-                    BackgroundColor="Transparent"
-                    Clicked="gobackbutton_Clicked"
-                    HorizontalOptions="Start"/>
-        </Grid>
-
-        <VerticalStackLayout Padding="20"  Spacing="20">
-
-            <Label 
+        <Label 
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
@@ -44,6 +24,7 @@
                 BackgroundColor="#e5e5e5"
                 TextColor="Black"
                 Placeholder="Password"
+                IsPassword="True"
                 />
             <Entry
                 x:Name="namesurnameregister"
@@ -57,8 +38,9 @@
                 BackgroundColor="#FCA311"
                 TextColor="White"
                 Margin="0, 15, 0, 0"
+                CornerRadius="22"
+                WidthRequest="180"
                 Clicked="registerbutton_Clicked"/>
-        </VerticalStackLayout>
     </VerticalStackLayout>
 
     

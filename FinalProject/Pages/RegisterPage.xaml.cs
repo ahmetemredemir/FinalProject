@@ -14,12 +14,11 @@ public partial class RegisterPage : ContentPage
 
     private async void registerbutton_Clicked(object sender, EventArgs e)
     {
-        // Kullanýcý girdilerini al
+
         string email = emailregister.Text;
         string password = passwordregister.Text;
         string fullName = namesurnameregister.Text;
 
-        // Boþ alan kontrolü
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(fullName))
         {
             await DisplayAlert("Error", "Please fill in all fields.", "OK");
@@ -28,7 +27,7 @@ public partial class RegisterPage : ContentPage
 
         try
         {
-            // Yeni kullanýcý oluþtur
+            //Yeni kullanýcý 
             var newUser = new Models.UserInfo
             {
                 Email = email,
@@ -36,19 +35,14 @@ public partial class RegisterPage : ContentPage
                 FullName = fullName
             };
 
-            // Kullanýcýyý veritabanýna kaydet
+            //Kullanýcýyý veritabanýna kaydet
             var database = Models.DatabaseService.GetDatabase();
             await database.InsertAsync(newUser);
 
-            // Kayýt baþarýlý mesajý
-            await DisplayAlert("Success", "Registration successful!", "OK");
-
-            // Giriþ sayfasýna yönlendir
-            await Shell.Current.GoToAsync("OpeningScreen"); // LoginPage rotasý tanýmlý olmalý
+            await Shell.Current.GoToAsync("OpeningScreen");
         }
         catch (Exception ex)
         {
-            // Hata durumunda mesaj
             await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
         }
     }
@@ -57,7 +51,7 @@ public partial class RegisterPage : ContentPage
     {
         base.OnAppearing();
 
-        // Veritabanýný baþlat
+        //Veritabanýný baþlat
         await FinalProject.Models.DatabaseService.InitializeDatabase();
     }
 

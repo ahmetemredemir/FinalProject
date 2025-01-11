@@ -11,14 +11,17 @@
             TextColor="black"/>
 
         <VerticalStackLayout Spacing="10">
-            <Entry x:Name="emailentry"  Placeholder="E-mail" BackgroundColor="#e5e5e5" TextColor="Black"/>
-            <Entry x:Name="passwordentry" Placeholder="Password" BackgroundColor="#e5e5e5" TextColor="Black"/>
+            <Entry x:Name="emailentry"  
+                   Placeholder="E-mail" 
+                   BackgroundColor="#e5e5e5" 
+                   TextColor="Black"/>
+            
+            <Entry x:Name="passwordentry" 
+                   Placeholder="Password" 
+                   BackgroundColor="#e5e5e5" 
+                   TextColor="Black"
+                   IsPassword="True"/>
 
-            <Button x:Name="loginbutton"
-                    Text="Log In"
-                    BackgroundColor="#FCA311"
-                    TextColor="White"
-                    Clicked="loginbutton_Clicked"/>
 
             <Label 
                 x:Name="donthaveaccounttext"
@@ -32,6 +35,15 @@
                 </Label.GestureRecognizers>
 
             </Label>
+
+            <Button x:Name="loginbutton"
+                    Text="Log In"
+                    BackgroundColor="#FCA311"
+                    TextColor="White"
+                    Margin="0, 15, 0, 0"
+                    CornerRadius="22"
+                    WidthRequest="180"
+                    Clicked="loginbutton_Clicked"/>
         </VerticalStackLayout>
         
     </VerticalStackLayout>
