@@ -24,6 +24,6 @@
     <ShellContent
         Title=""
         ContentTemplate="{DataTemplate pages:AppMainPage}"
-        />
+        Shell.NavBarIsVisible="false"/>
 
 </Shell>
