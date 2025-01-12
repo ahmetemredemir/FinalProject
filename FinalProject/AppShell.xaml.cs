@@ -16,7 +16,6 @@ namespace FinalProject
 
             Routing.RegisterRoute(nameof(AppMainPage), typeof(AppMainPage));
 
-
         }
     }
 }

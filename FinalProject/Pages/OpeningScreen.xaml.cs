@@ -27,7 +27,9 @@ public partial class OpeningScreen : ContentPage
 
             if (user != null)
             {
-                await Shell.Current.GoToAsync(nameof(IncomeEntryPage));
+                App.CurrentUserEmail = user.Email;
+
+                await Shell.Current.GoToAsync(nameof(AppMainPage));
             }
             else
             {

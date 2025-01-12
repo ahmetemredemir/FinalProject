@@ -5,7 +5,7 @@
              BackgroundColor="#FFFFFF">
     <VerticalStackLayout Spacing="20" Padding="20">
         <Label 
-            Text="denem"
+            Text="denemeyazisi"
             TextColor="black"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
@@ -16,22 +16,47 @@
                 <Label x:Name="aylikgelir"
                        Text="Aylık Gelir:" 
                        TextColor="white"
-                       FontSize="Medium"
+                       FontSize="Small"
                        HorizontalOptions="Start"/>
                 
                 <Label x:Name="aylikgider"
                        Text="Aylık Gider:"
                        TextColor="white"
-                       FontSize="Medium"
+                       FontSize="Small"
                        HorizontalOptions="Start"/>
 
                 <Label x:Name="ayliknet"
                        Text="Aylık Net:"
                        TextColor="white"
-                       FontSize="Medium"
+                       FontSize="Small"
                        HorizontalOptions="Start"/>
                 
             </VerticalStackLayout>
         </Frame>
+
+        <Grid ColumnSpacing="5" RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Grid.Row="0" Grid.Column="0" CornerRadius="22"
+                    Text="Gelir Ekle" TextColor="White" BackgroundColor="Green"
+                    x:Name="gelireklebutton" Clicked="gelireklebutton_Clicked"/>
+
+            <Button Grid.Row="0" Grid.Column="1" CornerRadius="22"
+                    Text="Gider Ekle" TextColor="White" BackgroundColor="Red"
+                    x:Name="gidereklebutton" Clicked="gidereklebutton_Clicked"/>
+            
+            <Button Grid.Row="1" Grid.ColumnSpan="2" CornerRadius="22"
+                    Text="Aylık Gelir Ekle" TextColor="White" BackgroundColor="#FCA311"
+                    x:Name="aylikgelirbutton" Clicked="aylikgelirbutton_Clicked"/>
+        </Grid>
         </VerticalStackLayout>
 </ContentPage>

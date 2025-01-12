@@ -20,5 +20,7 @@ namespace FinalProject.Models
 
         [NotNull]
         public string FullName { get; set; }
+
+        public decimal MonthlyIncome { get; set; }
     }
 }

@@ -27,7 +27,7 @@
                 </Border>
 
                 <Button x:Name="confirmIncome"
-                        Text="Next >"
+                        Text="Confirm"
                         TextColor="white"
                         BackgroundColor="#FCA311"
                         CornerRadius="22"
