@@ -27,7 +27,8 @@
                 x:Name="donthaveaccounttext"
                 Text="I don't have an account"
                 FontSize="10"
-                TextColor="DarkGray" 
+                TextDecorations="Underline"
+                TextColor="#595959" 
                 HorizontalOptions="End">
 
                 <Label.GestureRecognizers>
@@ -44,6 +45,13 @@
                     CornerRadius="22"
                     WidthRequest="180"
                     Clicked="loginbutton_Clicked"/>
+            
+            <!--<Button 
+    Text="Clear Database"
+    BackgroundColor="Red"
+    TextColor="White"
+    Clicked="ClearDatabaseButton_Clicked" />-->
+
         </VerticalStackLayout>
         
     </VerticalStackLayout>

@@ -25,8 +25,25 @@ namespace FinalProject.Models
 
         public static SQLiteAsyncConnection GetDatabase()
         {
+            if (database == null)
+            {
+                // Eğer veritabanı başlatılmadıysa bağlantıyı burada başlat
+                var databasePath = Path.Combine(FileSystem.AppDataDirectory, "UserDatabase.db");
+                database = new SQLiteAsyncConnection(databasePath);
+            }
             return database;
         }
+
+        public static async Task ClearAllData()
+        {
+            var database = GetDatabase();
+            if (database != null)
+            {
+                // UserInfo tablosundaki tüm verileri sil
+                await database.DeleteAllAsync<UserInfo>();
+            }
+        }
+
 
     }
 }

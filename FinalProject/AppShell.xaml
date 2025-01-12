@@ -26,4 +26,9 @@
         ContentTemplate="{DataTemplate pages:AppMainPage}"
         Shell.NavBarIsVisible="false"/>
 
+    <ShellContent
+        Title=""
+        ContentTemplate="{DataTemplate pages:IncomeEntryPage}"
+        Shell.NavBarIsVisible="false"/>
+
 </Shell>

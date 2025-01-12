@@ -27,7 +27,6 @@ public partial class RegisterPage : ContentPage
 
         try
         {
-            //Yeni kullanýcý 
             var newUser = new Models.UserInfo
             {
                 Email = email,
@@ -39,7 +38,7 @@ public partial class RegisterPage : ContentPage
             var database = Models.DatabaseService.GetDatabase();
             await database.InsertAsync(newUser);
 
-            await Shell.Current.GoToAsync("OpeningScreen");
+            await Shell.Current.GoToAsync("..");
         }
         catch (Exception ex)
         {
@@ -51,7 +50,6 @@ public partial class RegisterPage : ContentPage
     {
         base.OnAppearing();
 
-        //Veritabanýný baþlat
         await FinalProject.Models.DatabaseService.InitializeDatabase();
     }
 

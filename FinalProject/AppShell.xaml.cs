@@ -12,7 +12,11 @@ namespace FinalProject
 
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
 
+            Routing.RegisterRoute(nameof(IncomeEntryPage), typeof(IncomeEntryPage));
+
             Routing.RegisterRoute(nameof(AppMainPage), typeof(AppMainPage));
+
+
         }
     }
 }

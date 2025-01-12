@@ -27,7 +27,7 @@ public partial class OpeningScreen : ContentPage
 
             if (user != null)
             {
-                await Shell.Current.GoToAsync("AppMainPage");
+                await Shell.Current.GoToAsync(nameof(IncomeEntryPage));
             }
             else
             {
@@ -44,4 +44,24 @@ public partial class OpeningScreen : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(RegisterPage));
     }
+
+    //private async void ClearDatabaseButton_Clicked(object sender, EventArgs e)
+    //{
+    //    var databasePath = Path.Combine(FileSystem.AppDataDirectory, "UserDatabase.db");
+
+    //    // Veritabaný dosyasýný kontrol et ve sil
+    //    if (File.Exists(databasePath))
+    //    {
+    //        File.Delete(databasePath);
+    //        await DisplayAlert("Success", "Database has been reset.", "OK");
+    //    }
+    //    else
+    //    {
+    //        await DisplayAlert("Info", "Database file does not exist.", "OK");
+    //    }
+
+    //    // Veritabanýný yeniden oluþtur
+    //    await FinalProject.Models.DatabaseService.InitializeDatabase();
+    //}
+
 }
