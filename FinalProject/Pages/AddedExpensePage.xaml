@@ -32,7 +32,7 @@
                            BackgroundColor="Transparent"/>
 
                 <Button x:Name="addExpense"
-                        Text="Add Expense"
+                        Text="Save"
                         TextColor="white"
                         BackgroundColor="#FCA311"
                         CornerRadius="22"

@@ -32,7 +32,7 @@
                            BackgroundColor="Transparent"/>
 
                 <Button x:Name="addIncome"
-                        Text="Add Income"
+                        Text="Save"
                         TextColor="white"
                         BackgroundColor="#FCA311"
                         CornerRadius="22"

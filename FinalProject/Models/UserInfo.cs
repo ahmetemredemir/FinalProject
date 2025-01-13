@@ -22,5 +22,7 @@ namespace FinalProject.Models
         public string FullName { get; set; }
 
         public decimal MonthlyIncome { get; set; }
+
+        public decimal MonthlyExpense { get; set; }
     }
 }

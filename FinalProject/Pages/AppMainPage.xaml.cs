@@ -23,17 +23,18 @@ public partial class AppMainPage : ContentPage
         {
             var database = DatabaseService.GetDatabase();
             string currentUserEmail = App.CurrentUserEmail;
-
             var user = await database.Table<UserInfo>().FirstOrDefaultAsync(u => u.Email == currentUserEmail);
 
             if (user != null)
             {
-                aylikgelir.Text = $"Aylýk Gelir: {user.MonthlyIncome} TL";
+                aylikgelir.Text = $"Monthly Income: {user.MonthlyIncome:N2} TL";
+                aylikgider.Text = $"Monthly Expense: {user.MonthlyExpense:N2} TL";
+                ayliknet.Text = $"Monthly Net: {user.MonthlyIncome - user.MonthlyExpense:N2} TL";
             }
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Error", "An error occurred while loading income data.", "OK");
+            await DisplayAlert("Error", "An error occurred while loading data.", "OK");
         }
     }
 
