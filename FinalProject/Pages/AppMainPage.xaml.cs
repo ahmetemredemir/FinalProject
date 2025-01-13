@@ -42,13 +42,13 @@ public partial class AppMainPage : ContentPage
         await Shell.Current.GoToAsync(nameof(IncomeEntryPage));
     }
 
-    private void gelireklebutton_Clicked(object sender, EventArgs e)
+    private async void gelireklebutton_Clicked(object sender, EventArgs e)
     {
-
+        await Shell.Current.GoToAsync(nameof(AddedIncomePage));
     }
 
-    private void gidereklebutton_Clicked(object sender, EventArgs e)
+    private async void gidereklebutton_Clicked(object sender, EventArgs e)
     {
-
+        await Shell.Current.GoToAsync(nameof(AddedExpensePage));
     }
 }

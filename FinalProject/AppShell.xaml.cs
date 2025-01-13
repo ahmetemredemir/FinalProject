@@ -16,6 +16,9 @@ namespace FinalProject
 
             Routing.RegisterRoute(nameof(AppMainPage), typeof(AppMainPage));
 
+            Routing.RegisterRoute(nameof(AddedIncomePage), typeof(AddedIncomePage));
+
+            Routing.RegisterRoute(nameof(AddedExpensePage), typeof(AddedExpensePage));
         }
     }
 }

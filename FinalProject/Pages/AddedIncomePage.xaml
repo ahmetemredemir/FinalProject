@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.Pages.AddedIncomePage"
+             BackgroundColor="#FFFFFF">
+
+    <VerticalStackLayout VerticalOptions="Center" Padding="20, 0, 20, 0">
+        <Frame BackgroundColor="#e5e5e5" BorderColor="#c6c6c6">
+            <VerticalStackLayout Spacing="20">
+                <Label Text="Add Income:"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       />
+
+                <Border Stroke="#a6a6a6"
+                        StrokeThickness="0.5">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="5" />
+                    </Border.StrokeShape>
+
+                    <Entry x:Name="AddedIncomeEntry"
+                           TextColor="Black"
+                           Keyboard="Numeric"
+                           Placeholder="Ex: 1000"
+                           BackgroundColor="Transparent"
+                           />
+                </Border>
+
+                <Entry x:Name="IncomeDescription"
+                           TextColor="Black"
+                           Placeholder="Description (Optional)"
+                           BackgroundColor="Transparent"/>
+
+                <Button x:Name="addIncome"
+                        Text="Add Income"
+                        TextColor="white"
+                        BackgroundColor="#FCA311"
+                        CornerRadius="22"
+                        WidthRequest="180"
+                        Clicked="addIncome_Clicked"/>
+
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

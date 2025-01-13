@@ -58,5 +58,8 @@
                     Text="Aylık Gelir Ekle" TextColor="White" BackgroundColor="#FCA311"
                     x:Name="aylikgelirbutton" Clicked="aylikgelirbutton_Clicked"/>
         </Grid>
-        </VerticalStackLayout>
+
+
+
+    </VerticalStackLayout>
 </ContentPage>

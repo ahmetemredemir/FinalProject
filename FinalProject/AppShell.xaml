@@ -31,4 +31,14 @@
         ContentTemplate="{DataTemplate pages:IncomeEntryPage}"
         Shell.NavBarIsVisible="false"/>
 
+    <ShellContent
+        Title=""
+        ContentTemplate="{DataTemplate pages:AddedIncomePage}"
+        Shell.NavBarIsVisible="false"/>
+
+    <ShellContent
+        Title=""
+        ContentTemplate="{DataTemplate pages:AddedExpensePage}"
+        Shell.NavBarIsVisible="false"/>
+
 </Shell>
