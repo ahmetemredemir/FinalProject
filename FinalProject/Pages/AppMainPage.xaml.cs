@@ -1,20 +1,50 @@
 using Microsoft.Maui.Controls;
 using System;
 using FinalProject.Models;
+using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace FinalProject.Pages;
 
 public partial class AppMainPage : ContentPage
 {
+    public ObservableCollection<Transaction> Transactions { get; set; }
     public AppMainPage()
     {
         InitializeComponent();
+        Transactions = new ObservableCollection<Transaction>();
+        BindingContext = this;
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
         await UpdateIncomeLabel();
+        await LoadTransactions();
+    }
+
+    private async Task LoadTransactions()
+    {
+        try
+        {
+            var database = DatabaseService.GetDatabase();
+            string currentUserEmail = App.CurrentUserEmail;
+
+            var transactions = await database.Table<Transaction>()
+                                          .Where(t => t.UserEmail == currentUserEmail)
+                                          .OrderByDescending(t => t.Date)
+                                          .ToListAsync();
+
+            Transactions.Clear();
+            foreach (var transaction in transactions)
+            {
+                Transactions.Add(transaction);
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", "Failed to load transactions.", "OK");
+        }
     }
 
     private async Task UpdateIncomeLabel()

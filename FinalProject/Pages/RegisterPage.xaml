@@ -6,36 +6,44 @@
 
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
 
+        <Border WidthRequest="150"
+                HeightRequest="150"
+                Stroke="Transparent"
+                StrokeShape="RoundRectangle 50">
+            <Image Source="cashly_logo.jpg"/>
+        </Border>
+
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Create your account easily!"
+            FontSize="Title"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             TextColor="Black"/>
             
             <Entry 
                 x:Name="emailregister"
-                BackgroundColor="#e5e5e5"
+                BackgroundColor="Transparent"
                 TextColor="Black"
                 Placeholder="E-mail"
                 />
 
             <Entry
                 x:Name="passwordregister"
-                BackgroundColor="#e5e5e5"
+                BackgroundColor="Transparent"
                 TextColor="Black"
                 Placeholder="Password"
                 IsPassword="True"
                 />
             <Entry
                 x:Name="namesurnameregister"
-                BackgroundColor="#e5e5e5"
+                BackgroundColor="Transparent"
                 TextColor="Black"
                 Placeholder="Name-Surname"
                 />
             <Button
                 x:Name="registerbutton"
-                Text="Sign In"
-                BackgroundColor="#FCA311"
+                Text="Create Account"
+                BackgroundColor="#f5940d"
                 TextColor="White"
                 Margin="0, 15, 0, 0"
                 CornerRadius="22"

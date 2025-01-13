@@ -4,8 +4,17 @@
              x:Class="FinalProject.Pages.OpeningScreen"
              BackgroundColor="#FFFFFF">
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
+
+        <Border WidthRequest="150"
+                HeightRequest="150"
+                Stroke="Transparent"
+                StrokeShape="RoundRectangle 50">
+            <Image Source="cashly_logo.jpg"/>
+        </Border>
+        
         <Label 
-            Text="Welcome to the App!"
+            Text="Welcome to the Cashly!"
+            FontSize="Title"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             TextColor="black"/>
@@ -13,12 +22,12 @@
         <VerticalStackLayout Spacing="10">
             <Entry x:Name="emailentry"  
                    Placeholder="E-mail" 
-                   BackgroundColor="#e5e5e5" 
+                   BackgroundColor="Transparent" 
                    TextColor="Black"/>
             
             <Entry x:Name="passwordentry" 
                    Placeholder="Password" 
-                   BackgroundColor="#e5e5e5" 
+                   BackgroundColor="Transparent" 
                    TextColor="Black"
                    IsPassword="True"/>
 
@@ -39,13 +48,16 @@
 
             <Button x:Name="loginbutton"
                     Text="Log In"
-                    BackgroundColor="#FCA311"
+                    BackgroundColor="#f5940d"
                     TextColor="White"
                     Margin="0, 15, 0, 0"
                     CornerRadius="22"
                     WidthRequest="180"
-                    Clicked="loginbutton_Clicked"/>
+                    Clicked="loginbutton_Clicked">
+            </Button>
             
+            
+
             <!--<Button 
     Text="Clear Database"
     BackgroundColor="Red"

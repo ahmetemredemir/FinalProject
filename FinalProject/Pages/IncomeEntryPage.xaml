@@ -5,34 +5,27 @@
              BackgroundColor="#FFFFFF">
 
     <VerticalStackLayout VerticalOptions="Center" Padding="20, 0, 20, 0">
-        <Frame BackgroundColor="#e5e5e5" BorderColor="#c6c6c6">
+        <Frame BackgroundColor="#efefef" BorderColor="#c6c6c6">
             <VerticalStackLayout Spacing="20">
                 <Label Text="Enter Your Income:"
                        TextColor="Black"
                        HorizontalOptions="Center"
                        />
 
-                <Border Stroke="#a6a6a6"
-                        StrokeThickness="0.5">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="5" />
-                    </Border.StrokeShape>
-
-                    <Entry x:Name="IncomeEntry"
-                           TextColor="Black"
-                           Keyboard="Numeric"
-                           Placeholder="Ex: 22104"
-                           BackgroundColor="Transparent"
-                           />
-                </Border>
+                <Entry x:Name="IncomeEntry"
+                        TextColor="Black"
+                        Keyboard="Numeric"
+                        Placeholder="Ex: 22104"
+                        BackgroundColor="Transparent"
+                        />
 
                 <Button x:Name="confirmIncome"
-                        Text="Confirm"
-                        TextColor="white"
-                        BackgroundColor="#FCA311"
-                        CornerRadius="22"
-                        WidthRequest="180"
-                        Clicked="confirmIncome_Clicked"/>
+                    Text="Confirm"
+                    TextColor="white"
+                    BackgroundColor="#f5940d"
+                    CornerRadius="22"
+                    WidthRequest="180"
+                    Clicked="confirmIncome_Clicked"/>
 
             </VerticalStackLayout>
         </Frame>
